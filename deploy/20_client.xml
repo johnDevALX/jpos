@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+
+<channel-adaptor name='clientsimulator-adaptor'
+                 class="org.jpos.q2.iso.ChannelAdaptor" logger="Q2">
+    <channel class="org.jpos.iso.channel.XMLChannel" logger="Q2"
+
+             packager="org.jpos.iso.packager.XMLPackager">
+        <property name="host" value="52.234.156.59" />
+        <property name="port" value="29001" />
+<!--        <property name="host" value="127.0.0.1" />-->
+<!--        <property name="port" value="10000" />-->
+        <property name="timeout" value="360000" />
+<!--        <property name="socketFactory" value="org.jpos.iso.GenericSSLSocketFactory" />-->
+    </channel>
+    <in>my-send</in>
+    <out>my-receive</out>
+    <reconnect-delay>10000</reconnect-delay>
+</channel-adaptor>
