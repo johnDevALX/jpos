@@ -86,6 +86,7 @@ public class PinBlockUtilities {
     }
 
     public void addEZpk(String key, String encryptedZpk) {
+        log.info("Data {}", encryptedZpk);
         zpkMap.put(key, encryptedZpk);
     }
 
