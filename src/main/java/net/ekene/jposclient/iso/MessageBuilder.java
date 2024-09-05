@@ -61,7 +61,7 @@ public class MessageBuilder {
     public ISOMsg buildTransferMsg() {
         try {
             String pan = "5559405048128222";
-            byte[] bytes = pinBlockUtilities.generatePinBlock("1234", "C7153E524C07643D", pan);
+            byte[] bytes = pinBlockUtilities.generatePinBlock("1234", pinBlockUtilities.getEZpk("zpk"), pan);
 
             String amount = pinBlockUtilities.formulateDE4(1000);
             ISOMsg isoMsg = new ISOMsg();

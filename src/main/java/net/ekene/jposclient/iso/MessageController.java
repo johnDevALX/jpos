@@ -78,7 +78,7 @@ public class MessageController {
                 String zpk = keyExchangeResponse.getString(53);
                 String res = keyExchangeResponse.getString(39);
 
-                pinBlockUtilities.addEZpk("zpk", zpk);
+                pinBlockUtilities.decryptZpk(zpk);
                 log.info("mti {}", mti);
                 log.info("zpk {}", zpk);
                 log.info("res {}", res);
